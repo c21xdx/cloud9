@@ -1,0 +1,5 @@
+ide_domain:ide_domain_port {
+timeouts none
+tls off
+proxy / 127.0.0.1:8081
+}
