@@ -1,1 +1,6 @@
 # cloud9
+```
+ENV PASSWD admin
+ENV DOMAIN 0.0.0.0
+ENV DOMAIN_PORT 80
+```
