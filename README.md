@@ -1,6 +1,6 @@
 # cloud9
+cloud9 internal_port = 8080
+usename = admin
 ```
 ENV PASSWD admin
-ENV DOMAIN 0.0.0.0
-ENV DOMAIN_PORT 80
 ```
