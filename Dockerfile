@@ -6,6 +6,7 @@ ENV NODEPKGURL https://nodejs.org/dist/latest-v0.12.x/node-v0.12.18-linux-x64.ta
 ENV PASSWD admin
 ENV DOMAIN 0.0.0.0
 ENV DOMAIN_PORT 80
+ENV RCLONE_CONFIG_PASS rclone
 
 COPY c9conf /etc/c9conf
 
