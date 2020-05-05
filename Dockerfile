@@ -10,7 +10,7 @@ ENV DOMAIN_PORT 80
 COPY c9conf /etc/c9conf
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-build-essential g++ locales curl git ca-certificates supervisor sudo vim wget && \
+build-essential g++ locales curl git ca-certificates supervisor sudo vim wget openssh-client net-tools cron unzip && \
 sed -e 's/# en_US.UTF-8/en_US.UTF-8/' -i /etc/locale.gen && locale-gen && \
 curl -s $NODEPKGURL -o /tmp/node.tar.xz && \
 tar xf /tmp/node.tar.xz -C /opt/ && \
