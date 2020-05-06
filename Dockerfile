@@ -4,8 +4,6 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C
 ENV NODEPKGURL https://nodejs.org/dist/latest-v0.12.x/node-v0.12.18-linux-x64.tar.xz
 ENV PASSWD admin
-ENV DOMAIN 0.0.0.0
-ENV DOMAIN_PORT 80
 ENV RCLONE_CONFIG_PASS rclone
 
 COPY c9conf /etc/c9conf
@@ -26,9 +24,6 @@ rm -rf /opt/node /usr/bin/{node,nodejs,npm} && \
 rm -rf /root/.c9/{libevent-*,ncurses-*,tmux-*} && \
 rm -rf /c9/.git /root/.c9/tmp /root/.npm /root/.node-gyp && \
 rm -rf /tmp/* && mkdir /c9ws && \
-mkdir /home/caddy && cd /home/caddy && \
-wget https://github.com/caddyserver/caddy/releases/download/v1.0.4/caddy_v1.0.4_linux_amd64.tar.gz && \
-tar -zxvf caddy_v1.0.4_linux_amd64.tar.gz && rm -rf caddy_v1.0.4_linux_amd64.tar.gz && \
 curl https://rclone.org/install.sh | sudo bash && \
 chmod +x /etc/c9conf/c9run.sh && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
