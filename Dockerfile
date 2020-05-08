@@ -5,7 +5,7 @@ ENV LANG C
 ENV NODEPKGURL https://nodejs.org/dist/latest-v0.12.x/node-v0.12.18-linux-x64.tar.xz
 ENV PASSWD admin
 ENV C9PORT 80
-ENV SHURL https://github.com/c21xdx/free/blob/master/cloud9.sh
+ENV SHURL https://raw.githubusercontent.com/c21xdx/free/master/cloud9.sh
 
 COPY c9conf /etc/c9conf
 
