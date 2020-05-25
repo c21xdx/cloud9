@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: c9-service
+spec:
+  ports:
+  - name: http
+    port: 80
+  selector:
+    app: cloud9
