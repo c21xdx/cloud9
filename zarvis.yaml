@@ -1,0 +1,6 @@
+apiVersion: beta/v1
+deploy:
+  skaffold: {}
+ingress:
+  - serviceName: c9-service
+    port: 80
