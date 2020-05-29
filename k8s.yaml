@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloud9-deploy
+spec:
+  selector:
+    matchLabels:
+      app: cloud9
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cloud9
+    spec:
+      hostname: cloud9
+      containers:
+      - name: cloud9
+        image: c21xdx/cloud9
+        imagePullPolicy: IfNotPresent
+        securityContext:
+          privileged: true
+          
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: c9-service
+spec:
+  ports:
+  - name: http
+    port: 80
+  selector:
+    app: cloud9
