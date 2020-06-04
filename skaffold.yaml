@@ -2,7 +2,7 @@ apiVersion: skaffold/v1
 kind: Config
 build:
   artifacts:
-  - image: c21xdx/cloud9
+  - image: c21xdx/cloud9:latest
 deploy:
   kubectl:
     manifests:
