@@ -2,8 +2,8 @@ apiVersion: skaffold/v1
 kind: Config
 build:
   artifacts:
-  - image: c21xdx/cloud9:latest
+  - image: c21xdx/cloud9
 deploy:
   kubectl:
     manifests:
-      - k8s-*
+    - k8s.yaml
