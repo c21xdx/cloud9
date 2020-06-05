@@ -15,7 +15,7 @@ spec:
       hostname: cloud9
       containers:
       - name: cloud9-ide
-        image: cloud9-img
+        image: cloud9-img2
         imagePullPolicy: IfNotPresent
           
 ---
