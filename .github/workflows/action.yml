@@ -1,4 +1,4 @@
-name: Publish Docker
+name: Publish Docker 2
 on:  workflow_dispatch
 jobs:
   build:
