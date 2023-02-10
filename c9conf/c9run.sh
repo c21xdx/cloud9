@@ -2,9 +2,6 @@
 
 export PATH=$PATH:/usr/local/go/bin
 
-NODE_ENV="production"
-export PATH="${PATH}:/root/.c9/node/bin"
-
 export FLYCTL_INSTALL="/root/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
