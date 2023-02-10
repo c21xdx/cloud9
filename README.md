@@ -1,4 +1,4 @@
-# cloud9
+# cloud9 ubuntu 20.04
 ```
 ENV PASSWD admin
 ENV C9PORT 80
