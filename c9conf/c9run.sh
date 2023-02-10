@@ -1,5 +1,5 @@
 #!/bin/sh
-
+export PATH=$PATH:/usr/local/go/bin
 sed -i "s/password/$PASSWD/" /etc/c9conf/supervisord.conf
 sed -i "s/c9port/$C9PORT/" /etc/c9conf/supervisord.conf
 wget $SHURL -O /etc/c9conf/rclone.sh
