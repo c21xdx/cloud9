@@ -1,8 +1,8 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C
-ENV NODEPKGURL https://nodejs.org/dist/latest-v0.12.x/node-v0.12.18-linux-x64.tar.xz
+ENV NODEPKGURL https://nodejs.org/dist/v18.14.0/node-v18.14.0-linux-x64.tar.xz
 ENV PASSWD admin
 ENV C9PORT 80
 ENV RCLONE_CONFIG_PASS rclone
@@ -28,6 +28,7 @@ rm -rf /c9/.git /root/.c9/tmp /root/.npm /root/.node-gyp && \
 rm -rf /tmp/* && mkdir /c9ws && \
 curl https://rclone.org/install.sh | sudo bash && \
 chmod +x /etc/c9conf/c9run.sh && \
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.20.linux-amd64.tar.gz && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
 
 ENTRYPOINT ["/etc/c9conf/c9run.sh"]
