@@ -39,6 +39,7 @@ RUN curl -s ${NODEPKGURL} -o /tmp/node.tar.xz && \
 	rm -rf /root/.c9/libevent-* /root/.c9/ncurses-* /root/.c9/tmux-* && \
 	rm -rf /c9/.git /root/.c9/tmp /root/.npm /root/.node-gyp /tmp/* && \
 	PATH="$PATH:/root/.c9/node/bin" npm install -g c9 && \
+	PATH="$PATH:/root/.c9/node/bin" npm i -g vercel && \
 	mkdir /c9ws
 
 # ------------------------------------------------------------------------------
@@ -47,7 +48,7 @@ RUN curl https://rclone.org/install.sh | sudo bash && \
     chmod +x /etc/c9conf/c9run.sh && \
     curl -s ${GOLANGURL} -o /tmp/golang.tar.gz && \
     rm -rf /usr/local/go && tar -C /usr/local -xzf /tmp/golang.tar.gz && rm /tmp/golang.tar.gz && \
-    curl https://get.okteto.com -sSfL | sh && curl -L https://fly.io/install.sh | sh && npm i -g vercel && \
+    curl https://get.okteto.com -sSfL | sh && curl -L https://fly.io/install.sh | sh && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
 
 # ------------------------------------------------------------------------------
