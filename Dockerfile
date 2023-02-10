@@ -20,7 +20,7 @@ COPY c9conf /etc/c9conf
 # ------------------------------------------------------------------------------
 # Install base and clean up
 RUN apt-get update && apt-get install -y --no-install-recommends \
-	build-essential g++ locales curl git ca-certificates supervisor sudo vim wget openssh-client net-tools cron unzip python2.7-minimal python3.9-minimal && \
+	build-essential g++ locales curl git ca-certificates supervisor sudo vim wget openssh-client net-tools cron unzip python2.7-minimal && \
 	sed -e 's/# en_US.UTF-8/en_US.UTF-8/' -i /etc/locale.gen && locale-gen && \
 	apt-get clean && rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
 
