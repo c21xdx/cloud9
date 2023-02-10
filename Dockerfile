@@ -29,7 +29,7 @@ rm -rf /c9/.git /root/.c9/tmp /root/.npm /root/.node-gyp && \
 rm -rf /tmp/* && mkdir /c9ws && \
 curl https://rclone.org/install.sh | sudo bash && \
 chmod +x /etc/c9conf/c9run.sh && \
-curl -s $GOLANGURL -o /tmp/golang.tar.gz && \
+RUN curl -s $GOLANGURL -o /tmp/golang.tar.gz && \
 rm -rf /usr/local/go && tar -C /usr/local -xzf /tmp/golang.tar.gz && rm /tmp/golang.tar.gz && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
 
