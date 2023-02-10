@@ -39,7 +39,7 @@ RUN curl -s ${NODEPKGURL} -o /tmp/node.tar.xz && \
 	rm -rf /root/.c9/libevent-* /root/.c9/ncurses-* /root/.c9/tmux-* && \
 	rm -rf /c9/.git /root/.c9/tmp /root/.npm /root/.node-gyp /tmp/* && \
 	PATH="$PATH:/root/.c9/node/bin" npm install -g c9 && \
-	PATH="$PATH:/root/.c9/node/bin" npm i -g vercel && \
+	PATH="$PATH:/root/.c9/node/bin" npm install -g vercel && \
 	mkdir /c9ws
 
 # ------------------------------------------------------------------------------
