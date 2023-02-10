@@ -11,7 +11,6 @@ ENV GOLANGURL https://dl.google.com/go/go1.20.linux-amd64.tar.gz
 ENV PASSWD admin
 ENV C9PORT 80
 ENV RCLONE_CONFIG_PASS rclone
-ENV SHURL https://github.com/c21xdx/free/blob/master/cloud9.sh
 
 # ------------------------------------------------------------------------------
 # Add config folder
