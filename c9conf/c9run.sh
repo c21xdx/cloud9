@@ -5,10 +5,19 @@ export PATH=$PATH:/usr/local/go/bin
 NODE_ENV="production"
 export PATH="${PATH}:/root/.c9/node/bin"
 
+# 密码及端口修改
 sed -i "s/password/$PASSWD/" /etc/c9conf/supervisord.conf
 sed -i "s/c9port/$C9PORT/" /etc/c9conf/supervisord.conf
 
-wget $SHURL -O /etc/c9conf/rclone.sh
-sh /etc/c9conf/rclone.sh
+# 设置crontab
+env >> /etc/default/locale
+touch /var/spool/cron/crontabs/root
+echo "*/10 * * * * /bin/sh /c9ws/rclone/sync.sh >/dev/null 2>&1" >>/var/spool/cron/crontabs/root
+chmod 600 /var/spool/cron/crontabs/root
+service cron restart
+
+# 其它的...
+wget $SHURL -O /etc/c9conf/others.sh
+sh /etc/c9conf/others.sh
 
 supervisord -c /etc/c9conf/supervisord.conf
