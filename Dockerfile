@@ -45,6 +45,7 @@ RUN curl https://rclone.org/install.sh | sudo bash && \
     curl -s ${GOLANGURL} -o /tmp/golang.tar.gz && \
     rm -rf /usr/local/go && tar -C /usr/local -xzf /tmp/golang.tar.gz && rm /tmp/golang.tar.gz && \
     curl https://get.okteto.com -sSfL | sh && curl -L https://fly.io/install.sh | sh && npm i -g vercel && \
+    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
 
 # ------------------------------------------------------------------------------
