@@ -6,8 +6,8 @@ FROM ubuntu:focal
 # Set environment variables
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C
-ENV NODEPKGURL https://nodejs.org/dist/v18.14.0/node-v18.14.0-linux-x64.tar.xz
-ENV GOLANGURL https://dl.google.com/go/go1.20.linux-amd64.tar.gz
+ENV NODEPKGURL https://nodejs.org/dist/v18.18.0/node-v18.18.0-linux-x64.tar.xz
+ENV GOLANGURL https://dl.google.com/go/go1.21.1.linux-amd64.tar.gz
 ENV PASSWD admin
 ENV C9PORT 80
 ENV RCLONE_CONFIG_PASS rclone
